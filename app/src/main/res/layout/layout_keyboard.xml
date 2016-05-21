@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_weight="0"
+        android:background="@color/gray_cdcdcd"
+        android:divider="@drawable/vertical_line"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/softkeyBoard_switchType"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:background="@drawable/bg_stroke_gray_gray"
+            android:clickable="true"
+            android:gravity="left|center_vertical"
+            android:padding="8dp"
+            android:src="@drawable/ic_softboard" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <RadioGroup
+                android:id="@+id/sofkeyBoard_Type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_stroke_gray"
+                android:divider="@drawable/vertical_line"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <RadioButton
+                    android:textColor="@android:color/black"
+                    android:id="@+id/softBoard_Number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_radio"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="数字" />
+
+                <RadioButton
+                    android:textColor="@android:color/black"
+                    android:id="@+id/softBoard_Az"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_radio"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="字母" />
+
+                <RadioButton
+                    android:textColor="@android:color/black"
+                    android:id="@+id/softBoard_Punct"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_radio"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="符号" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/softKeyBoard_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="XXX安全键盘"
+                android:textColor="#0E6CAC"
+                android:textSize="18sp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/softkeyBoard_colse"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:background="@drawable/bg_stroke_gray_gray"
+            android:clickable="true"
+            android:gravity="left|center_vertical"
+            android:padding="8dp"
+            android:src="@drawable/ic_softb_close" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_weight="1" >
+
+        <com.igeek.safesoftboard.SoftKeyPunctLayView
+            android:id="@+id/softkeyBoard_Punct"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            app:keyNormalBgColor="@android:color/white"
+            app:keyPressedBgColor="#66929292"
+            app:keyTextColor="@android:color/black"
+            app:keyTextSize="20sp"
+            app:keyborderColor="#66929292"
+            app:keyborderSize="1dp" />
+
+        <com.igeek.safesoftboard.SoftKeyAzLayView
+            android:id="@+id/softkeyBoard_Az"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            app:keyNormalBgColor="@android:color/white"
+            app:keyPressedBgColor="#66929292"
+            app:keyTextColor="@android:color/black"
+            app:keyTextSize="20sp"
+            app:keyborderColor="#66929292"
+            app:keyborderSize="1dp" />
+
+        <com.igeek.safesoftboard.SoftKeyNumLayView
+            android:id="@+id/softkeyBoard_Number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            app:keyNormalBgColor="@android:color/white"
+            app:keyPressedBgColor="#66929292"
+            app:keyTextColor="@android:color/black"
+            app:keyTextSize="20sp"
+            app:keyborderColor="#66929292"
+            app:keyborderSize="1dp" />
+    </RelativeLayout>
+
+</LinearLayout>
